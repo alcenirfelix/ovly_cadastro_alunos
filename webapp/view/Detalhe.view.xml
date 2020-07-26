@@ -4,7 +4,6 @@
 		<pages>
 			<Page title="Aluno 10" showNavButton="true" navButtonPress="onBack">
 				<content>
-					<!--<ObjectHeader intro="{Id}" title="{FirstName} {LastName}" xmlns="sap.m" id="header0">-->
 					<ObjectHeader xmlns="sap.m" intro="{Id}" title="{ path:'FirstName', formatter: '.toUpper' } { path:'LastName', formatter: '.toUpper' }"
 						id="header0">
 						<attributes>
