@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="ovly.fiori_02.cadastro_de_alunos.controller.Detalhe">
+	<App>
+		<pages>
+			<Page title="Aluno 10" showNavButton="true" navButtonPress="onBack">
+				<content>
+					<!--<ObjectHeader intro="{Id}" title="{FirstName} {LastName}" xmlns="sap.m" id="header0">-->
+					<ObjectHeader xmlns="sap.m" intro="{Id}" title="{ path:'FirstName', formatter: '.toUpper' } { path:'LastName', formatter: '.toUpper' }"
+						id="header0">
+						<attributes>
+							<ObjectAttribute title="Nascimento"
+								text="{ path: 'BirthDate', type: 'sap.ui.model.type.DateTime', formatOptions: { relative: false, UTC: true } }"/>
+							<ObjectAttribute text="{UserName}" id="attribute1" title="Usuário"/>
+						</attributes>
+					</ObjectHeader>
+					<Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0">
+						<headerToolbar>
+							<Toolbar id="toolbar1">
+								<Title text="Dados administrativos"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<core:Fragment xmlns:core="sap.ui.core" fragmentName="ovly.fiori_02.cadastro_de_alunos.view.Detalhe_Form" type="XML" id="form0"/>
+						</content>
+					</Panel>
+					<Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel1">
+						<headerToolbar>
+							<Toolbar id="toolbar2">
+								<Title text="Competências"/>
+								<List noDataText="Drop list items here" id="list0">
+									<items>
+										<StandardListItem type="Navigation" title="List Item 1" description="Description text" icon="sap-icon://picture" id="item0"/>
+									</items>
+								</List>
+								<content/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<Text text="Panel Content" id="text3"/>
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Toolbar width="100%" id="toolbar3">
+						<content>
+							<Button xmlns="sap.m" text="Deletar" id="button4" type="Reject" icon="sap-icon://delete"/>
+							<ToolbarSpacer id="spacer2"/>
+							<Button xmlns="sap.m" text="Editar" id="button5" icon="sap-icon://edit" type="Accept"/>
+						</content>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
